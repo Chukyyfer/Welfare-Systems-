@@ -1,1 +1,518 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Welfare Systems</title>
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#fffbea;
+  color:#171717;
+  min-height:100vh;
+}
+
+
+/* HEADER */
+
+header{
+  width:100%;
+  padding:18px 20px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  width:82px;
+  height:auto;
+  display:block;
+}
+
+.explore{
+  font-size:13px;
+  font-weight:700;
+  text-decoration:none;
+
+  background:linear-gradient(
+    90deg,
+    #009b77,
+    #ffc132,
+    #e85d75,
+    #3976e8
+  );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
+}
+
+
+/* MAIN */
+
+main{
+  width:100%;
+  max-width:700px;
+
+  margin:0 auto;
+
+  padding:8px 20px 30px;
+
+  text-align:center;
+}
+
+
+/* INTRO */
+
+.intro{
+  margin:10px 0 22px;
+}
+
+.intro h1{
+  font-size:clamp(28px,8vw,46px);
+
+  line-height:1.05;
+
+  letter-spacing:-1.5px;
+
+  margin-bottom:10px;
+}
+
+.intro p{
+  font-size:14px;
+
+  color:#666;
+
+  line-height:1.5;
+
+  max-width:420px;
+
+  margin:auto;
+}
+
+
+/* VIDEO */
+
+.video-wrapper{
+  width:min(100%,430px);
+
+  aspect-ratio:9/16;
+
+  margin:0 auto;
+
+  border-radius:24px;
+
+  overflow:hidden;
+
+  background:#151515;
+
+  box-shadow:
+    0 15px 45px rgba(0,0,0,.12);
+}
+
+.video-wrapper video{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+}
+
+
+/* SURVEY BUTTON */
+
+.cta{
+  display:inline-flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:8px;
+
+  margin-top:25px;
+
+  padding:15px 23px;
+
+  background:#ffc132;
+
+  color:#171717;
+
+  text-decoration:none;
+
+  font-size:15px;
+
+  font-weight:700;
+
+  border-radius:50px;
+
+  box-shadow:
+    0 8px 25px rgba(255,193,50,.28);
+
+  transition:.2s ease;
+}
+
+.cta:hover{
+  transform:translateY(-2px);
+}
+
+
+/* SERVICES */
+
+.services{
+  margin-top:42px;
+
+  padding-top:20px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:8px;
+
+  border-top:
+    1px solid rgba(0,0,0,.08);
+}
+
+.service{
+  text-align:center;
+
+  color:#666;
+
+  font-size:10px;
+
+  line-height:1.3;
+}
+
+.service-icon{
+  display:block;
+
+  font-size:17px;
+
+  margin-bottom:5px;
+}
+
+
+/* SERVICE COLORS */
+
+.rental .service-icon{
+  color:#e89b2c;
+}
+
+.health .service-icon{
+  color:#e85d75;
+}
+
+.education .service-icon{
+  color:#3976e8;
+}
+
+.salary .service-icon{
+  color:#009b77;
+}
+
+
+/* EMBEDDED SURVEY */
+
+#survey{
+  display:none;
+
+  margin:45px auto 0;
+
+  text-align:left;
+}
+
+
+/*
+When the survey button is clicked,
+the survey section becomes visible.
+*/
+
+#survey:target{
+  display:block;
+}
+
+.back{
+  display:inline-block;
+
+  margin:
+    0 0 12px;
+
+  color:#555;
+
+  font-size:12px;
+
+  text-decoration:none;
+}
+
+.survey-box{
+  width:100%;
+
+  height:900px;
+
+  border:0;
+
+  border-radius:20px;
+
+  background:#fff;
+
+  box-shadow:
+    0 10px 35px rgba(0,0,0,.10);
+}
+
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+
+  padding:
+    25px 15px 20px;
+
+  font-size:10px;
+
+  color:#999;
+}
+
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+  header{
+    padding:17px;
+  }
+
+  .logo{
+    width:76px;
+  }
+
+  main{
+    padding-left:17px;
+    padding-right:17px;
+  }
+
+  .intro{
+    margin-top:8px;
+  }
+
+  .intro h1{
+    font-size:31px;
+  }
+
+  .video-wrapper{
+    width:min(100%,360px);
+
+    border-radius:20px;
+  }
+
+  .survey-box{
+    height:850px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+  <a href="#">
+    <img
+      class="logo"
+      src="welfare-logo.jpg"
+      alt="Welfare Systems logo"
+    >
+  </a>
+
+  <a
+    class="explore"
+    href="#services"
+  >
+    Explore
+  </a>
+
+</header>
+
+
+
+<main>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+  <h1>
+    A better way to<br>
+    support communities.
+  </h1>
+
+  <p>
+    Discover what Welfare Systems could mean
+    for you and your community.
+  </p>
+
+</section>
+
+
+
+<!-- PROMO VIDEO -->
+
+<div class="video-wrapper">
+
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    controls
+    preload="metadata"
+  >
+
+    <source
+      src="Welfare-promo-v3.mp4"
+      type="video/mp4"
+    >
+
+    Your browser does not support video playback.
+
+  </video>
+
+</div>
+
+
+
+<!-- SURVEY BUTTON -->
+
+<a
+  class="cta"
+  href="#survey"
+>
+  Be the first. Take the survey
+  <span>→</span>
+</a>
+
+
+
+<!-- SERVICES -->
+
+<section
+  class="services"
+  id="services"
+>
+
+  <div class="service rental">
+
+    <span class="service-icon">
+      ⌂
+    </span>
+
+    Rental
+
+  </div>
+
+
+  <div class="service health">
+
+    <span class="service-icon">
+      ♡
+    </span>
+
+    Health
+
+  </div>
+
+
+  <div class="service education">
+
+    <span class="service-icon">
+      📚
+    </span>
+
+    Education
+
+  </div>
+
+
+  <div class="service salary">
+
+    <span class="service-icon">
+      ₦
+    </span>
+
+    Salary
+
+  </div>
+
+</section>
+
+
+
+<!-- EXISTING WELFARE SURVEY -->
+
+<section id="survey">
+
+  <a
+    class="back"
+    href="#"
+  >
+    ← Back to Welfare Systems
+  </a>
+
+
+  <iframe
+    class="survey-box"
+
+    src="https://chukyyfer.github.io/Where-you-already-help-people/"
+
+    title="Welfare Systems Survey"
+
+    loading="lazy"
+
+    allow="camera"
+  >
+  </iframe>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  © Welfare Systems 2026
+
+</footer>
+
+
+</body>
+</html>

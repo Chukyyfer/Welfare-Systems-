@@ -1,6 +1,14 @@
-
-
 Welfare Systems
+
+Notice
+
+© 2026 Welfare Systems. All rights reserved.
+The content, branding, graphics, promotional materials, and original software contained in this project may not be reproduced, modified, distributed, or used commercially without permission.
+
+
+
+
+
 
 About
 

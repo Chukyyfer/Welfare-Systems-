@@ -35,7 +35,7 @@ Your response helps contribute to this process.
 
 Project Website
 
-https://chukyyfer.github.io/welfare-systems-/
+https://chukyyfer.github.io/Welfare-Systems-/
 
 Visit the live Welfare Systems survey:
 
